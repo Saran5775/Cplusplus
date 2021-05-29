@@ -1,0 +1,8 @@
+Selection sorting:
+Unsorted input array:
+1 5 2 6 4 9 
+Sorted resultant array:
+1 2 4 5 6 9 
+
+
+Executed In: 0.136 ms
