@@ -1,4 +1,4 @@
-// Sum of elements in an array
+// Bubble sort
 #include<bits/stdc++.h>
 using namespace std;
 #define ll 				long long int
