@@ -1,0 +1,64 @@
+// Program to find the number that was ocuuring only once in an array where other elements are occuring even number of times
+#include<bits/stdc++.h>
+using namespace std;
+#define ll 				long long int
+#define ld				long double
+#define mod             1000000007
+#define inf             1e18
+#define endl			"\n"
+#define pb 				push_back
+#define vi              vector<ll>
+#define vs				vector<string>
+#define pii             pair<ll,ll>
+#define ump				unordered_map
+#define mp 				make_pair
+#define pq_max          priority_queue<ll>
+#define pq_min          priority_queue<ll,vi,greater<ll> >
+#define all(n) 			n.begin(),n.end()
+#define ff 				first
+#define ss 				second
+#define mid(l,r)        (l+(r-l)/2)
+#define loop1(i,a,b) 	for(int i=(a);i<=(b);i++)
+#define loop0(i,a,b)	for(int i=(a);i<(b);i++)
+#define looprev(i,a,b) 	for(int i=(a);i>=(b);i--)
+#define logarr(arr,a,b)	for(int z=(a);z<=(b);z++) cout<<(arr[z])<<" ";cout<<endl;	
+
+void file_i_o()
+{
+    ios_base::sync_with_stdio(0); 
+    cin.tie(0); 
+    cout.tie(0);
+	#ifndef ONLINE_JUDGE
+	    freopen("input.txt", "r", stdin);
+	    freopen("output.txt", "w", stdout);
+	#endif
+}
+
+ll findNumOccuringOnce(vi &v){
+	// x^0 = x
+	// x^X = 0
+	ll ans = 0;
+	loop0(i, 0, v.size()){
+		ans^=v[i];
+	}
+	return ans;
+}
+int main(int argc, char const *argv[]) {
+	clock_t begin = clock();
+	file_i_o();
+	ll n;
+	cin >> n;
+	vi v(n);
+	loop0(i,0,n){
+		int x; cin >> x;
+		v[i] = x;
+	}
+	cout<<findNumOccuringOnce(v)<<endl;
+
+	
+	#ifndef ONLINE_JUDGE 
+	  clock_t end = clock();
+	  cout<<"\n\nExecuted In: "<<double(end - begin) / CLOCKS_PER_SEC*1000<<" ms";
+	#endif 
+	return 0;
+}
