@@ -1,0 +1,8 @@
+Merge sorting:
+Unsorted input array:
+12 10 15 4 5 6 -1 2 -5 
+Sorted resultant array:
+-5 -1 2 4 5 6 10 12 15 
+
+
+Executed In: 0.148 ms
